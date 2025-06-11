@@ -2,174 +2,90 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toko Pakaian Oma Encing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oma Encing Style - Toko Pakaian Online</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f8f8;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #444;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    section {
-      padding: 20px;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 15px;
-      width: 300px;
-      text-align: center;
-    }
-    .item img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .btn-beli {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .btn-beli:hover {
-      background-color: #218838;
-    }
-    .testimonial, .form-pemesanan {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 0 auto 30px;
-      padding: 20px;
-    }
-    .form-pemesanan input, .form-pemesanan select, .form-pemesanan textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: white;
-    }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header, footer { background: #222; color: white; text-align: center; padding: 20px; }
+    nav { text-align: center; background: #444; padding: 10px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    section { padding: 20px; }
+    .filters { text-align: center; margin-bottom: 20px; }
+    .filters button { margin: 5px; padding: 8px 15px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .item { background: white; width: 280px; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; display: none; }
+    .item img { width: 100%; border-radius: 8px; }
+    .btn-wa { margin-top: 10px; padding: 10px 15px; background: #25D366; color: white; border: none; border-radius: 5px; text-decoration: none; display: inline-block; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Oma Encing - Toko Pakaian Online</h1>
-    <p>Gaya Kekinian, Harga Bersahabat!</p>
-  </header>
 
-  <nav>
-    <a href="#produk">Produk</a>
-    <a href="#testimoni">Testimoni</a>
-    <a href="#form">Pesan Sekarang</a>
-  </nav>
+<header>
+  <h1>Oma Encing Style</h1>
+  <p>Toko Pakaian Online | Gaya Kekinian, Harga Bersahabat!</p>
+</header>
 
-  <section id="produk">
-    <h2 style="text-align:center">Kategori Produk</h2>
-    <div class="container">
-      <div class="item">
-        <img src="https://via.placeholder.com/300x200" alt="Kaos Polos">
-        <h3>Kaos Polos Unisex</h3>
-        <p><strong>Harga:</strong> Rp50.000</p>
-        <p><strong>Ukuran:</strong> S, M, L, XL</p>
-        <p><strong>Warna:</strong> Putih, Hitam, Navy, Abu</p>
-        <p><strong>Bahan:</strong> Cotton Combed 30s</p>
-        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20pesan%20Kaos%20Polos%20Unisex" class="btn-beli">Beli via WhatsApp</a>
-      </div>
-      <div class="item">
-        <img src="https://via.placeholder.com/300x200" alt="Hoodie Oversize">
-        <h3>Hoodie Oversize</h3>
-        <p><strong>Harga:</strong> Rp120.000</p>
-        <p><strong>Ukuran:</strong> M, L, XL</p>
-        <p><strong>Warna:</strong> Hitam, Cokelat, Cream</p>
-        <p><strong>Bahan:</strong> Fleece Premium</p>
-        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20pesan%20Hoodie%20Oversize" class="btn-beli">Beli via WhatsApp</a>
-      </div>
-      <div class="item">
-        <img src="https://via.placeholder.com/300x200" alt="Celana Chino">
-        <h3>Celana Chino Slim Fit</h3>
-        <p><strong>Harga:</strong> Rp95.000</p>
-        <p><strong>Ukuran:</strong> 28 - 36</p>
-        <p><strong>Warna:</strong> Khaki, Hitam, Navy</p>
-        <p><strong>Bahan:</strong> Twill Stretch</p>
-        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20pesan%20Celana%20Chino%20Slim%20Fit" class="btn-beli">Beli via WhatsApp</a>
-      </div>
+<nav>
+  <a href="#produk">Produk</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<section id="produk">
+  <h2 style="text-align:center;">Produk Kami</h2>
+
+  <div class="filters">
+    <button onclick="filterProduk('semua')">Semua</button>
+    <button onclick="filterProduk('kaos')">Kaos</button>
+    <button onclick="filterProduk('hoodie')">Hoodie</button>
+    <button onclick="filterProduk('celana')">Celana</button>
+  </div>
+
+  <div class="container">
+    <div class="item kaos">
+      <img src="https://via.placeholder.com/300x200?text=Kaos+Polos" alt="Kaos Polos" />
+      <h3>Kaos Polos</h3>
+      <p>Rp50.000 - Ukuran: S-XL</p>
+      <a href="https://wa.me/6281234567890?text=Halo%2C+saya+mau+pesan+Kaos+Polos" class="btn-wa">Beli via WhatsApp</a>
     </div>
-  </section>
-
-  <section id="testimoni">
-    <h2 style="text-align:center">Testimoni Pelanggan</h2>
-    <div class="testimonial">
-      <p><strong>Rina, Bandung:</strong> "Kaosnya nyaman banget dipakai, pengiriman cepat!"</p>
-      <p><strong>Andi, Surabaya:</strong> "Hoodienya adem dan pas di badan. Mantap!"</p>
-      <p><strong>Sari, Yogyakarta:</strong> "Harga terjangkau dan kualitas bagus. Rekomen banget!"</p>
+    <div class="item hoodie">
+      <img src="https://via.placeholder.com/300x200?text=Hoodie+Oversize" alt="Hoodie" />
+      <h3>Hoodie Oversize</h3>
+      <p>Rp120.000 - Ukuran: M-XL</p>
+      <a href="https://wa.me/6281234567890?text=Halo%2C+saya+mau+pesan+Hoodie+Oversize" class="btn-wa">Beli via WhatsApp</a>
     </div>
-  </section>
-
-  <section id="form">
-    <h2 style="text-align:center">Formulir Pemesanan</h2>
-    <div class="form-pemesanan">
-      <form action="#" method="post">
-        <label for="nama">Nama Lengkap:</label>
-        <input type="text" id="nama" name="nama" required>
-
-        <label for="produk">Pilih Produk:</label>
-        <select id="produk" name="produk">
-          <option>Kaos Polos Unisex</option>
-          <option>Hoodie Oversize</option>
-          <option>Celana Chino Slim Fit</option>
-        </select>
-
-        <label for="ukuran">Ukuran:</label>
-        <input type="text" id="ukuran" name="ukuran" placeholder="Contoh: M, L, 30" required>
-
-        <label for="alamat">Alamat Pengiriman:</label>
-        <textarea id="alamat" name="alamat" rows="3" required></textarea>
-
-        <label for="catatan">Catatan Tambahan:</label>
-        <textarea id="catatan" name="catatan" rows="2"></textarea>
-
-        <input type="submit" value="Kirim Pesanan" style="background:#28a745;color:white;border:none;padding:10px 20px;border-radius:5px;cursor:pointer">
-      </form>
+    <div class="item celana">
+      <img src="https://via.placeholder.com/300x200?text=Celana+Chino" alt="Celana" />
+      <h3>Celana Chino Slim Fit</h3>
+      <p>Rp95.000 - Ukuran: 28-36</p>
+      <a href="https://wa.me/6281234567890?text=Halo%2C+saya+mau+pesan+Celana+Chino+Slim+Fit" class="btn-wa">Beli via WhatsApp</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Oma Encing. Semua hak dilindungi.</p>
-    <p>Hubungi kami di WhatsApp: 0812-3456-7890</p>
-  </footer>
+<section id="kontak" style="text-align:center;">
+  <h2>Kontak Kami</h2>
+  <p>Hubungi via WhatsApp: <a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Oma Encing Style. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
+  function filterProduk(kategori) {
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => {
+      if (kategori === 'semua' || item.classList.contains(kategori)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+  // Tampilkan semua saat halaman dimuat
+  window.onload = () => filterProduk('semua');
+</script>
+
 </body>
 </html>
